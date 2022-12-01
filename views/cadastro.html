@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/media-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="public/js/validacao.js" defer></script>
+    <script src="public/js/eye-cada.js" defer></script>
+</head>
+<body>
+    <main>
+        <section id="login">
+                <div id="imagem2"></div>
+                <div id="formulario">
+                    <h1 id="titulo">Cadastrar</h1>
+                    <form action="/cadastro" method="POST">
+                        <div class="campo2"> 
+                            <input class="quadrado" type="text" name="nome" id="inome" placeholder="Somente Letras" required minlength="3">
+                            <label id="labelnome" for="inome">Nome</label>
+                        </div>
+                        <div class="campo2">
+                            <input class="quadrado" type="email" name="email" id="ilogin" placeholder="E-mail do Login" autocomplete="email" required>
+                            <label id="labellogin" for="ilogin">E-mail do Login</label>
+                        </div>
+                        <div class="campo2">
+                            <input class="quadrado" type="password" name="password" id="isenha2" placeholder="Senha" autocomplete="current-password" required minlength="8">
+                            <label id="labelsenha" for="isenha2">Senha</label>
+                            <span id="eye2" class="material-icons">visibility_off</span>
+                        </div>
+                        <div class="campo2">
+                            <input class="quadrado" type="password" name="confirmsenha" id="iconfirmsenha" placeholder="Confirmar Senha" autocomplete="current-password" required minlength="8">
+                            <label id="labelconfirmsenha" for="iconfirmsenha">Confirmar Senha</label>
+                            <span id="eye3" class="material-icons eyeview">visibility_off</span>
+                        </div>
+                        <input type="submit" value="Cadastrar">
+                        <a href="/" class="botao">Login</a>
+                    </form>
+                </div>
+        </section>
+    </main>
+    
+</body>
+</html>

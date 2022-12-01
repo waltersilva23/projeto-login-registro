@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: #ffffff;
+}

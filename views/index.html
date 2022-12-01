@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="public/style.css">
+    <link rel="stylesheet" href="public/media-query.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="public/js/eye-reg.js" defer></script>
+</head>
+<body>
+    <main>
+        <section id="login">    
+            <div id="imagem">
+            <!--Aqui fica a imagem da tela de login-->
+            </div>
+            <div id="formulario">
+                <h1>Login</h1>
+                <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+                <form action="/" method="POST" autocomplete="on">
+                    <div class="campo">
+                        <span class="material-icons">person</span>
+                        <input type="email" name="email" id="ilogin" placeholder="Seu e-mail" autocomplete="email" required maxlength="30">
+                        <label for="ilogin">Login</label>
+                    </div>
+                    <div class="campo">
+                        <span class="material-icons">vpn_key</span>
+                        <input type="password" name="password" id="isenha" placeholder="Sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                        <label for="isenha">Senha</label>
+                        <span id="eye" class="material-icons eyereg">visibility_off</span>
+                    </div>
+                    <input type="submit" value="Entrar">
+                    <a href="esqueci.html" class="botao">
+                        Esqueci a senha <span class="material-icons">mail</span>
+                    </a>
+                    <p >É novo por aqui? <a href="/cadastro" class="cadastro">Cadastre-se</a></p>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
