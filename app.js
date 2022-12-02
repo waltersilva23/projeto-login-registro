@@ -4,13 +4,13 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const connection = require('./models/db');
 
-const encoder = bodyParser.urlencoded();
 
 //body-parser
-app.use(bodyParser.json());
+app.use(bodyParser.json()); //testar sem essa linha
 app.use(bodyParser.urlencoded({
-    extended: true
+	extended: true
 }));
+const encoder = bodyParser.urlencoded();
 
 //ejs/static
 app.engine('html', require('ejs').renderFile);
