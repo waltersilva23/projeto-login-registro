@@ -6,7 +6,7 @@ const connection = require('./models/db');
 
 
 //body-parser
-app.use(bodyParser.json()); //testar sem essa linha
+//app.use(bodyParser.json()); Não precisa
 app.use(bodyParser.urlencoded({
 	extended: true
 }));
