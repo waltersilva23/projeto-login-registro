@@ -40,7 +40,7 @@ app.post('/cadastro', (req , res) => {
         res.send('Erro: Senhas diferentes!')
 
     } 
-	connection.query('INSERT INTO USUARIOS(NOME, EMAIL, PASSWORD) VALUES(?, ?, ?)', [nome, email, password], function (err) {
+	connection.query('INSERT INTO USUARIOS(NOME, EMAIL, PASSWORD, CreatedAt) VALUES(?, ?, ?, NOW())', [nome, email, password], function (err) {
 		if(err)
 			console.error(err);
 
@@ -52,7 +52,7 @@ app.post('/',encoder, (req, res) => {
 	var email = req.body.email;
 	var password = req.body.password;
 
-	connection.query('SELECT * FROM USUARIOS WHERE email = ? AND password = ?', [email,password], function(error,results){
+	connection.query('SELECT 1 FROM USUARIOS WHERE email = ? AND password = ?', [email,password], function(error,results){
 		if (results) {
 			res.redirect('/welcome');
 		} else {

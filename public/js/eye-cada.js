@@ -22,28 +22,22 @@ btnConfirm.addEventListener('click',()=>{
     }
 })
 
-//trocando o simbolo de visualização
-let btnSenha2 = document.querySelector('#eye2')
-let btnConfirm2 = document.querySelector('#eye3')
+let campos = document.querySelectorAll('.campo2');
 
-btnSenha2.addEventListener('click',() => {
-    let eyeSenha2 = document.querySelector('.material-icons')
-    
-    if(eyeSenha2.innerHTML == 'visibility_off'){
-        eyeSenha2.innerHTML = 'visibility'
-    } else {
-        eyeSenha2.innerHTML = 'visibility_off'
-    }
+for(let i = 0; i < campos.length; i++) {
+    const element = campos[i];
 
-})
+    const eyeIcon = element.querySelector('.material-icons');
 
-btnConfirm2.addEventListener('click', () => {
-    let eyeConfirm = document.querySelector('.eyeview')
+    if(!eyeIcon) continue;
 
-    if(eyeConfirm.innerHTML == 'visibility_off'){
-        eyeConfirm.innerHTML = 'visibility'
-    } else {
-        eyeConfirm.innerHTML = 'visibility_off'
-    }
+    eyeIcon.addEventListener('click', () => {
+        if(eyeIcon.innerHTML == 'visibility_off'){
+            eyeIcon.innerHTML = 'visibility'
+        } else {
+            eyeIcon.innerHTML = 'visibility_off'
+        }
+    });
 
-})
+}
+
